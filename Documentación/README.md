@@ -35,9 +35,9 @@ Se usó la mediana porque no se distorsiona con valores extremos. Los 1.463 regi
 - Gasto: mediana de 19,18; el 61% está en el rango bajo (hasta 25).
 - Ingresos: mediana de 3.244; el 60% está en el rango bajo (hasta 4.500).
 
-## 3. Avance 2 (pendiente)
+## 3. Avance 2
 
-## 4. Avance 3 (pendiente)
+## 4. Avance 3
 
 ## 5. Cómo reproducir
 Instalar `pandas`, `numpy`, `matplotlib`, `seaborn` y `requests`, y ejecutar los notebooks en orden. La API key de Yelp debe ir como variable de entorno, nunca en el repositorio.
