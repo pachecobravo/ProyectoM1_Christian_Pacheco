@@ -35,9 +35,21 @@ Se usó la mediana porque no se distorsiona con valores extremos. Los 1.463 regi
 - Gasto: mediana de 19,18; el 61% está en el rango bajo (hasta 25).
 - Ingresos: mediana de 3.244; el 60% está en el rango bajo (hasta 4.500).
 
-## 3. Avance 2
+## 3. Avance 2: Integración con la API de Yelp (`Avance_2_API_Yelp.ipynb`)
 
-## 4. Avance 3
+- **Conexión:** API de Yelp Fusion, con la clave en `API_Key.txt` (ignorado por git).
+- **Extracción:** 240 restaurantes de Chicago (máximo que permite Yelp por búsqueda, de 7.900 informados) con nombre, categoría, calificación, reseñas y precio. La muestra son los más relevantes, así que no representa toda la ciudad.
+- **Limpieza:** sin duplicados; el precio faltante (25,8%) se marcó como "No especificado".
+- **Integración:** se resumió Yelp por ciudad (calificación promedio, mediana de reseñas, número de restaurantes) y se unió a los 5.384 clientes de Chicago. Como todos viven en Chicago, esas columnas valen lo mismo en cada fila.
+
+**Hallazgos (clientes vs. restaurantes):**
+- El precio más frecuente en Yelp es `$$` (49,2%) y el gasto mediano de los clientes es 19,18: la oferta coincide con el gasto típico.
+- Los clientes prefieren carnes (29,5%) y vegetariano (20,9%); las categorías más comunes en Yelp son New American, Italian y Mexican, y ninguna es vegetariana. Hipótesis: demanda vegetariana poco cubierta.
+- Las categorías de Yelp son tipos de cocina, no preferencias alimenticias, por lo que la comparación es aproximada.
+
+Nota: Yelp no devuelve exactamente los mismos restaurantes en cada consulta, por lo que las cifras pueden variar entre ejecuciones.
+
+## 4. Avance 3 (pendiente)
 
 ## 5. Cómo reproducir
-Instalar `pandas`, `numpy`, `matplotlib`, `seaborn` y `requests`, y ejecutar los notebooks en orden. La API key de Yelp debe ir como variable de entorno, nunca en el repositorio.
+Instalar `pandas`, `numpy`, `matplotlib`, `seaborn` y `requests`, y ejecutar los notebooks en orden. Crear un archivo `API_Key.txt` con la API key de Yelp en la carpeta de los notebooks; no se incluye en el repositorio.
