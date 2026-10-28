@@ -14,7 +14,8 @@ venv/
 .env
 
 # Archivos del sistema
-
 .DS_Store
 Thumbs.db
+
+# Clave API
 API_Key.txt
